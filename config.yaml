@@ -1,0 +1,28 @@
+project:
+  name: dnnls_final_project
+
+paths:
+  data_dir: sample_data
+  results_dir: results
+  figures_dir: results/figures
+  samples_dir: results/samples
+  models_dir: models
+
+train:
+  seed: 42
+  epochs: 10
+  batch_size: 8
+  lr: 0.0001
+  weight_decay: 0.0
+  num_workers: 2
+  device: cuda
+
+text:
+  tokenizer_name: bert-base-uncased
+  max_length: 120
+
+checkpoints:
+  save_every: 5
+  sequence_predictor_epoch_5: models/sequence_predictor_epoch_5.pth
+  sequence_predictor_epoch_10: models/sequence_predictor_epoch_10.pth
+  visual_autoencoder_pretrained: models/visual_autoencoder_pretrained.pth
